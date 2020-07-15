@@ -2,14 +2,14 @@ const bread = 15.678;
 const sausage = 123.965;
 const juice = 90.2345;
 
-const max = Math.max(bread, sausage, juice);
-console.log(max);
+const maxPrice = Math.max(bread, sausage, juice);
+console.log(maxPrice);
 
-const min = Math.min(bread, sausage, juice);
-console.log(min);
+const minPrice = Math.min(bread, sausage, juice);
+console.log(minPrice);
 
-const sum = bread + sausage + juice;
-console.log(sum);
+const sumPrice = bread + sausage + juice;
+console.log(sumPrice);
 
 const breadPriceWithoutPenni = Math.floor(bread);
 console.log(breadPriceWithoutPenni);
@@ -23,7 +23,7 @@ console.log(juicePriceWithoutPenni);
 const sumWithoutPenni = Math.floor(bread + sausage + juice);
 console.log(sumWithoutPenni);
 
-const sumToHundreds = Math.round(Math.round(sum)/100) * 100;
+const sumToHundreds = Math.round(Math.round(sumPrice)/100) * 100;
 console.log(sumToHundreds);
 
 
@@ -31,22 +31,22 @@ const num = sumWithoutPenni % 2 === 0 ? 'Парне' : 'Не парне';
 console.log(num);
 
 const cash = 500;
-const rest = (cash - sum).toFixed(2);
+const rest = (cash - sumPrice).toFixed(2);
 console.log(rest);
 
-const averageValue =  sum / 3;
+const averageValue =  sumPrice / 3;
 const averageValue1 = averageValue.toFixed(2);
 console.log(averageValue1);
 
 const discount = (Math.random() * 100);
-const cost = sum / 2;
+const cost = sumPrice / 2;
 const profit = (cost - discount).toFixed(2);
 console.log(profit);
 
-let row = `
-Максимальне значення:${max};
-Мінімальне значення:${min};
-Сума товарів:${sum};
+const row = `
+Максимальне значення:${maxPrice};
+Мінімальне значення:${minPrice};
+Сума товарів:${sumPrice};
 Ціна bread без копійок:${breadPriceWithoutPenni};
 Ціна sausage без копійок:${sausagePriceWithoutPenni};
 Ціна juice без копійок:${juicePriceWithoutPenni};
@@ -59,11 +59,11 @@ let row = `
 `
 console.log(row);
 
-let container=document.querySelector("#txt");
+const container=document.querySelector("#getElementById");
 container.innerHTML=`
-<p>Максимальне значення:${max}</p>
-<p>Мінімальне значення:${min}</p>
-<p>Сума товарів:${sum}</p>
+<p>Максимальне значення:${maxPrice}</p>
+<p>Мінімальне значення:${minPrice}</p>
+<p>Сума товарів:${sumPrice}</p>
 <p>Ціна bread без копійок:${breadPriceWithoutPenni}</p>
 <p>Ціна sausage без копійок:${sausagePriceWithoutPenni}</p>
 <p>Ціна juice без копійок:${juicePriceWithoutPenni}</p>
